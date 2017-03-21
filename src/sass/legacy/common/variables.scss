@@ -1,0 +1,32 @@
+// Layout
+$site-max-width: 1200px;
+
+$margin: 16px;
+
+@import '../vendor/neat/neat-helpers';
+// Breakpoints
+$mobile: new-breakpoint(max-width 600px 4);
+$tablet: new-breakpoint(max-width 1024px 8);
+$desktop: new-breakpoint(min-width 1024px 12);
+$desktop-large: new-breakpoint(min-width 1200px 12);
+
+
+// Colours
+$great-red: #E41F13;
+$great-blue: #1E1348;
+$flag-red: #B00D23;
+$stone: #DFD5C5;
+$light-stone: #F6F4F1;
+$grey: #4A4A4A;
+$light-grey: #777;
+$lightest-grey: #bcbcbc;
+$grey-on-dark-bg: #DCE0DF;
+$purple: #4F0B7B;
+$mid-blue: #00549F;
+$dark-mid-blue: #003666;
+$aqua: #007EA3;
+$white: #FAFAFA;
+$super-nav: #110B29;
+
+// The margin beneath <p>s stc
+$typography-bottom-margin: $margin;

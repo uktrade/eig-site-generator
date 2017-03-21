@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Change target to timestamped folder if production build  -->
+{% set assets = '/assets/'+ build if build else '/assets' %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="apple-touch-icon" href="{{assets}}/img/app-icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="{{assets}}/img/app-icons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" size="120x120" href="{{assets}}/img/app-icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" size="120x120" href="{{assets}}/img/app-icons/apple-touch-icon-120x120-precomposed.png">
+  <link rel="apple-touch-icon" size="180x180" href="{{assets}}/img/app-icons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon-precomposed" size="180x180" href="{{assets}}/img/app-icons/apple-touch-icon-180x180-precomposed.png">
+  <title>{{ pageTitle | safe}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon-precomposed" href="{{assets}}/img/app-icons/apple-touch-icon-precomposed.png">
+  <link rel="icon" type="image/png" href="{{assets}}/img/shortcut-icon.png">
+  <link rel="canonical" href="/" />
+  <script type='text/javascript' src='{{assets}}/vendor/js/modernizr.min.js'></script>
+  <!-- JS Libs -->
+  <!--[if lte IE 8]>
+  <script type="text/javascript" src="{{assets}}/vendor/js/html5shiv.min.js"></script>
+  <script type="text/javascript" src="{{assets}}/vendor/js/eventListener.polyfill.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="{{assets}}/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <noscript>
+    <style>
+      .navigation-toggle {
+        display: block;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+  {% include "./header.html" %}
+  <div class="legacy">
+    <main class="main" role="main">
+    {% block content %}
+    {% endblock %}
+    </main>
+  </div>
+  {% include "./footer.html" %}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <!-- JS Libs -->
+  <script type='text/javascript' src='{{assets}}/vendor/js/jquery.min.js'></script>
+  <script type='text/javascript' src='{{assets}}/vendor/js/remodal.min.js?ver=1.1'></script>
+  <!-- CSS Libs -->
+  <link rel='stylesheet' href='{{assets}}/vendor/css/remodal.css' type='text/css' media='all' />
+  <link rel='stylesheet' href='{{assets}}/vendor/css/remodal-default-theme.css' type='text/css' media='all' />
+  <!--[if lte IE 8]>
+  <script type="text/javascript" src="{{assets}}/vendor/js/selectivizr.min.js"></script>
+  <script type="text/javascript" src="{{assets}}/vendor/js/ie8.js"></script>
+  <![endif]-->
+  <script src="{{assets}}/js/main.js"></script>
+

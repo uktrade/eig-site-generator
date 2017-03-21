@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+
+  &:focus {
+    outline: 3px solid $focus-yellow;
+  }
+}
+
+.link {
+  @extend %regular;
+  border-bottom: 1px solid;
+  color: $mid-blue;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px dashed;
+    color: $aqua;
+  }
+
+  &--grey {
+    color: $light-grey;
+    display: block;
+
+    &:hover {
+      border-bottom: 1px dashed;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+.logo-hmg {
+  display: block;
+
+  img {
+    display: block;
+  }
+}

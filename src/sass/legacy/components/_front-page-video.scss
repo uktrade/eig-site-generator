@@ -1,0 +1,31 @@
+.front-page-video {
+  @include background-cover('/assets/img/video.jpg');
+  min-height: 400px;
+  padding: 80px 0 !important;
+  background-position: center center;
+}
+
+.front-page-video__heading {
+  color: $white;
+  line-height: 55px;
+}
+
+.front-page-video__button {
+  border: 2px solid $white;
+  border-bottom-color: $white !important; // it is necessary to override the a:visited style
+  display: inline-block;
+  zoom: 1;
+  padding: 20px;
+  margin-top:10px;
+  color: $white;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 500;
+  &:visited {
+    color: $white !important;
+  }
+  &:active {
+    color: $white !important;
+  }
+
+}

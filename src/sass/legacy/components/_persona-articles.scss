@@ -1,0 +1,27 @@
+$persona-padding: 20px;
+.persona-articles {
+    article {
+      margin:10px 0 0 0;
+      padding: $persona-padding 0 $persona-padding 0;
+      border-bottom: 1px solid $light-stone;
+      min-height: 240px;
+      position: relative;
+      &:after {
+        content: '';
+        border-right:1px solid  $light-stone;
+        position: absolute;
+        top: 25px;
+        right:- $persona-padding/2;
+        bottom: 35px;
+      }
+    }
+    .persona-box {
+        &:nth-child(3n) {
+            article {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

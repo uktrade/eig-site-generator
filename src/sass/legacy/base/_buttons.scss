@@ -1,0 +1,25 @@
+.legacy {
+  button.button {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    background-color: $mid-blue;
+    height: 60px;
+    border: 1px solid $aqua;
+    margin-bottom: $typography-bottom-margin;
+
+    &:active {
+      background-color: $aqua;
+    }
+
+    &:hover {
+      background-color: $dark-mid-blue;
+    }
+  }
+
+  .button--naked {
+    background-color: white;
+    border: 2px solid $mid-blue;
+    color: $mid-blue;
+  }
+}

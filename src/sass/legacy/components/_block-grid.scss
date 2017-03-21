@@ -1,0 +1,26 @@
+.block-grid {
+  display: flex;
+  flex-direction: row;
+  clear: both;
+}
+
+.block-grid__block {
+  display: flex;
+  position: relative;
+  padding-bottom: $margin;
+  box-sizing: border-box;
+  border: 1px solid $grey-on-dark-bg;
+}
+
+.block-grid__inner-block {
+  padding: 40px 20px;
+  height: 100%;
+  p {
+    margin-bottom: $margin * 2;
+  }
+}
+
+.block-grid__level-link {
+  position: absolute;
+  bottom: $margin;
+}

@@ -1,0 +1,65 @@
+$advice-block-padding: 20px;
+.legacy {
+  .advice-block {
+    height: 400px;
+    background-color: $great-blue;
+    position: relative;
+    margin-bottom: $margin;
+    p { color: $white; }
+  }
+
+  .advice-block__body {
+    padding: $advice-block-padding;
+  }
+
+  .advice-block--blue {
+    background-color: $mid-blue;
+  }
+
+  .advice-block__heading {
+    color: $white;
+  }
+
+  .advice-block__rule {
+    position: absolute;
+    top: $advice-block-padding;
+    border: 0;
+    border-bottom: 1px solid white;
+    width: 100%;
+  }
+
+  .advice-block__legend {
+    color: $white;
+    background-color: $great-blue;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    z-index: 2;
+    font-size: 14px;
+    margin-left: -($advice-block-padding / 2);
+    padding: 0px ($advice-block-padding / 2) ($advice-block-padding / 2);
+  }
+
+  .advice-block__legend--blue {
+    background-color: $mid-blue;
+  }
+
+  .advice-block__link {
+    position: absolute;
+    bottom: $margin;
+    color: $white;
+    &:visited {
+      color: $white;
+      border-color: $white;
+    }
+    &:active {
+      color: $white;
+      border-color: $white;
+    }
+    &:after {
+      content: ' >';
+      border: 0;
+    }
+  }
+}

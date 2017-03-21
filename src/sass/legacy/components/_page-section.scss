@@ -1,0 +1,8 @@
+.page-section {
+  padding: ($margin * 4) 0px;
+  background-color: $white; // This is off-white but DIT style guide calls it 'White'
+}
+
+.page-section.light {
+  background-color: #FFF;
+}

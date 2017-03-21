@@ -1,0 +1,26 @@
+.legacy {
+  .page-section {
+    padding-top: 2 * $margin;
+  }
+  img {
+    height: auto !important;
+  }
+  @include media($tablet) {
+    .persona-articles article:after {
+      display: none;
+    }
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+  }
+  @include media($mobile) {
+    footer.content-info {
+      ul {
+        padding-left:0;
+      }
+    }
+  }
+}
+

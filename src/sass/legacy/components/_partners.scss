@@ -1,0 +1,16 @@
+.partners {
+
+  ul {
+    margin-top:30px;
+    padding: 0;
+    li{
+      &:before {
+        display:none;
+      }
+      margin-bottom: 20px;
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}

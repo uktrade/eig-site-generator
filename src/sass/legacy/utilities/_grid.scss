@@ -1,0 +1,170 @@
+
+.row {
+  @include outer-container($site-max-width);
+  @include media($tablet) {
+    @include outer-container(95%);
+  }
+  @include media($desktop) {
+    margin: 0 30px;
+  }
+  @include media($desktop-large) {
+    margin: auto;
+  }
+  .row {
+    @include media($tablet) {
+      @include outer-container(100%);
+    }
+  }
+  .columns {
+    @include span-columns(12);
+
+    &.one {
+      @include span-columns(1);
+    }
+
+    &.two {
+      @include span-columns(2);
+    }
+
+    &.three {
+      @include span-columns(3);
+    }
+
+    &.four {
+      @include span-columns(4);
+    }
+
+    &.five {
+      @include span-columns(5);
+    }
+
+    &.six {
+      @include span-columns(6);
+    }
+
+    &.seven {
+      @include span-columns(7);
+    }
+
+    &.eight {
+      @include span-columns(8);
+    }
+
+    &.nine {
+      @include span-columns(9);
+    }
+  }
+}
+
+.row-thin-gutter {
+  @include outer-container($site-max-width);
+  .columns {
+    @include span-columns(3.206);
+    @include omega;
+    @include pad(0 5px 0 0);
+
+    @include media($tablet) {
+      @include span-columns(4.13);
+      @include omega;
+      @include pad(0 5px 0 0);
+    }
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+}
+.persona-articles {
+  .four {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}
+
+/**
+* Media queries
+**/
+@include media($tablet) {
+  .block-grid {
+    display: block !important;
+    .columns.four {
+      @include span-columns(8);
+      @include omega;
+    }
+  }
+  .front-page-video {
+    div.columns.five {
+      @include span-columns(3);
+    }
+  }
+  article.article {
+    .columns {
+      &.content {
+        @include span-columns(8);
+      }
+    }
+    aside.columns.four {
+      @include span-columns(8);
+    }
+  }
+
+  .row .columns {
+    &.four {
+      &.persona-box {
+        @include span-columns(8);
+        article {
+          min-height: unset;
+        }
+      }
+    }
+  }
+  .hero {
+    .columns {
+      &.seven, &.four {
+        @include span-columns(8);
+        @include omega;
+      }
+    }
+    .hero__text {
+      margin: 40px 0 40px 0;
+    }
+  }
+}
+
+@include media($mobile) {
+  .front-page-video {
+    div.columns.five {
+      @include span-columns(0);
+    }
+    header.columns.five {
+      @include span-columns(4);
+      text-align: center;
+    }
+  }
+  .hero {
+    .columns {
+      &.seven, &.four {
+        @include span-columns(8);
+        @include omega;
+      }
+    }
+    .hero__text {
+      margin: 40px 0 40px 0;
+    }
+  }
+  .advice-block {
+    height: auto !important;
+  }
+  .row {
+    .columns {
+      &.one, &.two, &.three, &.four, &.five, &.six, &.seven, &.eight, &.nine {
+        @include span-columns(4);
+      }
+    }
+  }
+}
+
+@include media($mobile) {
+  
+}
+
+

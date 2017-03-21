@@ -1,0 +1,113 @@
+@import 'variables';
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 25px;
+  font-weight: 300;
+  color: $grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+.legacy {
+
+.main {
+  font-family: "Roboto", sans-serif;
+  line-height: 25px;
+  font-weight: 300;
+  color: $grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: $typography-bottom-margin;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  min-height: 48px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  min-height: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+
+p.large {
+  font-size:24px;
+  font-weight: 300;
+  line-height: 31px;
+  letter-spacing: -0.2px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+p.small {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+a {
+  border-bottom: 1px solid;
+  letter-spacing: 0;
+  text-decoration: none;
+  color: $mid-blue;
+
+  &:active {
+    color: $purple;
+    border-bottom-style: dashed;
+    border-bottom-color: $purple;
+  }
+
+  &:visited {
+    color: $purple;
+    border-bottom-color: $purple;
+  }
+}
+
+a.wob-link {
+  color: $white;
+  &:visited {
+    color: $white;
+    border-bottom-color: $white;
+  }
+  &:active {
+    color: $white;
+    border-bottom-color: $white;
+  }
+}
+
+a.no-decoration-link {
+  border: 0;
+  &:visited {
+    border: 0;
+  }
+  &:active {
+    border: 0;
+  }
+}
+
+}

@@ -1,0 +1,14 @@
+main {
+  & > article {
+    min-height: 330px;
+    margin-bottom: 40px;
+    .row {
+      & > header {
+        padding-top: 60px;
+      }
+    }
+    & > header {
+      padding-top: 60px;
+    }
+  }
+}

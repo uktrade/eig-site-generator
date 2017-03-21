@@ -1,0 +1,30 @@
+.legacy {
+  ul {
+    padding-left: 18px;
+    margin-bottom: $typography-bottom-margin;
+  }
+
+  li {
+    position: relative;
+    padding-left: 10px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 8px;
+      background-color: $stone;
+
+      display:inline-block;
+      width:10px;
+      height:10px;
+      border-radius:50%
+    }
+  }
+  /* Migration 07/03/2017 FIX */
+  .next-steps__list {
+    padding-left: 0px;
+  }
+  .next-steps__step {
+    position: initial;
+  }
+}

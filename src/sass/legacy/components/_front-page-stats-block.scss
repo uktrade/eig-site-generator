@@ -1,0 +1,18 @@
+.front-page-stats-block {
+  background-color: $flag-red;
+  padding: $margin * 2;
+  opacity: 0.9;
+  hr {
+    border: 0;
+    border-top: 1px dashed $white;
+    margin: ($margin * 2) 0px;
+  }
+  a {
+    @extend .wob-link;
+  }
+}
+
+.front-page-stats-block__number {
+  font-size: 34px;
+  font-weight: 500;
+}

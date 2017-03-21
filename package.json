@@ -1,0 +1,71 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "Website template for EIG website",
+  "private": true,
+  "config": {
+    "debug": "metalsmith-markdown, metalsmith-page-builder",
+    "unsafe-perm": true
+  },
+  "engine": "node >= 6.3.0",
+  "scripts": {
+    "dev": "npm run clean && npm run build-dev && nodemon -e html --watch src/templates lib/server.js",
+    "start": "npm run clean && npm run build && node lib/server.js",
+    "clean": "rimraf build && mkdirp build",
+    "build": "npm run html && npm run sass && npm run js && npm run vendor && npm run images",
+    "build-dev": "export DIT_ENV='development' && { npm run html & npm run sass & npm run js & npm run vendor & npm run images; }",
+    "html": "DEBUG=\"$npm_package_config_debug, $DEBUG\" node ./lib/build-pages.js",
+    "posthtml": "./lib/post-build-pages.sh",
+    "sass": "./lib/build-sass.sh",
+    "js": "./lib/build-js.sh",
+    "vendor": "./lib/copy-vendor-files.sh",
+    "images": "./lib/copy-images.sh",
+    "predeploy": "npm install && npm run postinstall && npm run build",
+    "deploy": "node_modules/iigb-aws-helpers/deploy.sh",
+    "release": "node_modules/iigb-aws-helpers/release.sh",
+    "rollback": "node_modules/iigb-aws-helpers/rollback.sh",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-content": "npm install eig-content",
+    "postinstall": "npm install https://$GIT_ACCESS_TOKEN:x-oauth-basic@github.com/uktrade/eig-content.git",
+    "publish-to-staging": "node node_modules/s3-upload/bin/s3-upload.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uktrade/eig-site-generator.git"
+  },
+  "keywords": [
+    "DIT",
+    "metalsmith"
+  ],
+  "author": "",
+  "license": "OGL",
+  "bugs": {
+    "url": "https://github.com/uktrade/eig-site-generator/issues"
+  },
+  "homepage": "https://github.com/uktrade/eig-site-generator#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "dit-pattern-library": "uktrade/dit-pattern-library",
+    "envify": "^4.0.0",
+    "express": "^4.14.1",
+    "iigb-aws-helpers": "uktrade/iigb-aws-helpers",
+    "metalsmith": "^2.3.0",
+    "metalsmith-html-minifier": "^2.2.0",
+    "metalsmith-layouts": "^1.8.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-page-builder": "uktrade/metalsmith-page-builder",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "nunjucks": "^3.0.0",
+    "replace-in-file": "^2.5.0",
+    "rimraf": "^2.6.0",
+    "s3-upload": "^0.1.0",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "fs-extra": "^2.0.0",
+    "jquery": "^3.1.1"
+  }
+}

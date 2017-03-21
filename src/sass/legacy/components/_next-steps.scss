@@ -1,0 +1,34 @@
+.next-steps {
+  border-top: 1px solid $lightest-grey;
+}
+
+.next-steps__list {
+  margin-top:30px;
+  padding: 0;
+}
+
+.next-steps__step {
+  &:before {
+    display:none;
+  }
+  display: block;
+  background-color: $mid-blue;
+  a {
+    display: block;
+    padding: ($margin / 2) $margin;
+  }
+  margin-bottom: 20px;
+}
+
+.next-steps__step-copy {
+  width: 80%;
+  height: 50px;
+}
+
+.next-steps__arrow {
+  text-align: right;
+  img {
+    width: 13px;
+    height: 22px;
+  }
+}

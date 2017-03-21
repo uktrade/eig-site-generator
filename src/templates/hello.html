@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{myContent.content.title}}</h1>
+{{myContent.content.subTitle}}
+{{myContent.content.contents | safe}}
+{% endblock %}
+
+
+
+
