@@ -1,5 +1,3 @@
-{{ config | dump }}
-
 <header role="banner">
     <div class="navigation">
       <div class="navigation-strip background--dark-navy">
@@ -33,8 +31,8 @@
           <nav>
             <ul class="list-inline list-separators navigation-main-menu">
               <li><a title="new to exporting" href="https://www.export.great.gov.uk/new/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "new" %} navigation-main-link--active{% endif %}">New to exporting</a></li>
-              <li><a title="occasional exporter" href="https://www.export.great.gov.uk/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "occasional" %}navigation-main-link--active{% endif %}">Occasional exporter</a></li>
-              <li><a title="regular exporter" href="https://www.export.great.gov.uk/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Regular exporter</a></li>
+              <li><a title="occasional exporter" href="https://export.great.gov.uk/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "occasional" %}navigation-main-link--active{% endif %}">Occasional exporter</a></li>
+              <li><a title="regular exporter" href="https://export.great.gov.uk/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Regular exporter</a></li>
               <li><a href="https://opportunities.export.great.gov.uk" title="Export opportunities" class="navigation-main-link navigation-main-link--secondary">Export opportunities</a></li>
               <li><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer" class="navigation-main-link navigation-main-link--secondary">Find a buyer</a></li>
               <li><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas" class="navigation-main-link navigation-main-link--secondary">Selling online overseas</a></li>
@@ -50,16 +48,16 @@
               <div class="navigation-toggle-services-section">
                 <h3 class="font-large font-light-grey font-light push--bottom hide-mobile">Export readiness</h3>
                 <ul class="font-regular">
-                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "new" %}class="navigation-toggle-active"{% endif %}"><a title="new to exporting" href="https://www.export.great.gov.uk/new/">New to exporting</a></li>
-                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "occasional" %}class="navigation-toggle-active"{% endif %}"><a title="occasional exporter" href="https://www.export.great.gov.uk/occasional/">Occasional exporter</a></li>
-                  <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="https://www.export.great.gov.uk/regular/" class="last">Regular exporter</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "new" %}class="navigation-toggle-active"{% endif %}"><a title="new to exporting" href="https://export.great.gov.uk/new/">New to exporting</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "occasional" %}class="navigation-toggle-active"{% endif %}"><a title="occasional exporter" href="https://export.great.gov.uk/occasional/">Occasional exporter</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="https://export.great.gov.uk/regular/" class="last">Regular exporter</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-3">
               <h3 class="font-large font-light-grey font-light push--bottom hide-mobile soft--left">Online tools</h3>
               <ul class="navigation-toggle-middle">
-                <li class="navigation-toggle-item"><a href="https://www.export.great.gov.uk/opportunities" title="Export opportunities">Export opportunities</a></li>
+                <li class="navigation-toggle-item"><a href="https://export.great.gov.uk/opportunities" title="Export opportunities">Export opportunities</a></li>
                 <li class="navigation-toggle-item"><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer">Find a buyer</a></li>
                 <li class="navigation-toggle-item"><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas">Selling online overseas</a></li>
               </ul>
@@ -74,7 +72,7 @@
             <div class="col-3">
               <h3 class="font-large font-light-grey font-light soft--left push--bottom hide-mobile">About us</h3>
               <ul class="navigation-toggle-middle">
-                <li class="navigation-toggle-item"><a href="https://www.export.great.gov.uk/about/" title="About great.gov.uk">About great.gov.uk</a></li>
+                <li class="navigation-toggle-item"><a href="https://export.great.gov.uk/about/" title="About great.gov.uk">About great.gov.uk</a></li>
                 <li class="navigation-toggle-item"><a href="https://contact-us.export.great.gov.uk/selling_online_overseas" title="Contact us" class="last">Contact us</a></li>
               </ul>
             </div>
@@ -83,70 +81,3 @@
       </div>
     </div>
   </header>
-
-
-
-
-<!-- OLD 
-
-
-
-  <header role="banner">
-    <div class="navigation">
-      <div class="navigation-strip background--dark-navy">
-        <div class="outer-container">
-          <ul class="list-inline list-separators">
-            <li class="float--left soft--right"><a class="logo-hmg" href="https://www.gov.uk/" title="hm government"><img src="{{assets}}/img/hm_gov_logo.svg"></a></li>
-            <li class="float--left soft--left"><a class="link--grey" href="https://great.gov.uk" title="part of great.gov.uk">Part of <strong>great.gov.uk</strong></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="background--great-blue">
-        <div class="outer-container">
-          <a href="/" title="Go to the Exporting is great homepage" class="navigation-logo-link float--left">
-            <img src="{{assets}}/img/eig_logo_new.svg" alt="Exporting is great logo" class="navigation-logo">
-          </a>
-        </div>
-      </div>
-      <div class="navigation-main background--dark-blue">
-        <div class="navigation-main-section outer-container">
-          <nav>
-            <ul class="list-inline list-separators navigation-main-menu">
-              <li><a title="new to exporting" href="/new/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "new" %} navigation-main-link--active{% endif %}">New to exporting</a></li>
-              <li><a title="occasional exporter" href="/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "occasional" %} navigation-main-link--active{% endif %}">Occasional exporter</a></li>
-              <li><a title="regular exporter" href="/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "regular" %} navigation-main-link--active{% endif %}">Regular exporter</a></li>
-              <li><a href="http://opportunities.export.great.gov.uk" title="Export opportunities" class="navigation-main-link navigation-main-link--secondary">Export opportunities</a></li>
-              <li><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer" class="navigation-main-link navigation-main-link--secondary">Find a buyer</a></li>
-              <li><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas" class="navigation-main-link navigation-main-link--secondary">Selling online overseas</a></li>
-              <li><a href="/get-finance/" title="Get finance" class="navigation-main-link navigation-main-link--secondary {% if navigationMainLinkActive == "get-finance" %} navigation-main-link--active{% endif %}">Get finance</a></li>
-              <li><a href="https://events.trade.gov.uk/" title="Events" class="navigation-main-link navigation-main-link--secondary">Events</a></li>
-            </ul>
-          </nav>
-          <a class="button navigation-main-button font-white" title="" href=""><i class="icon icon-menu"></i>All</a>
-        </div>
-        <div class="navigation-toggle background--dark-navy">
-          <div class="outer-container">
-            <ul class="col-3">
-              <li class="navigation-toggle-item navigation-toggle-services"><a title="new to exporting" href="/new/" {% if navigationMainLinkActive == "new" %}class="navigation-toggle-active"{% endif %}>New to exporting</a></li>
-              <li class="navigation-toggle-item navigation-toggle-services"><a title="occasional exporter" href="/occasional/" {% if navigationMainLinkActive == "occasional" %}class="navigation-toggle-active"{% endif %}>Occasional exporter</a></li>
-              <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="/regular/" class="last {% if navigationMainLinkActive == "regular" %}navigation-toggle-active{% endif %}">Regular exporter</a></li>
-            </ul>
-            <ul class="col-3 navigation-toggle-middle">
-              <li class="navigation-toggle-item"><a href="http://opportunities.export.great.gov.uk" title="Export opportunities">Export opportunities</a></li>
-              <li class="navigation-toggle-item"><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer">Find a buyer</a></li>
-              <li class="navigation-toggle-item"><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas">Selling online overseas</a></li>
-            </ul>
-            <ul class="col-3 navigation-toggle-middle">
-              <li class="navigation-toggle-item"><a href="/get-finance/" title="UK Export Finance" {% if navigationMainLinkActive == "get-finance" %} class="navigation-toggle-active"{% endif %}>Get finance</a></li>
-              <li class="navigation-toggle-item"><a href="https://events.trade.gov.uk/" title="Events">Events</a></li>
-            </ul>
-            <ul class="col-3 navigation-toggle-middle">
-              <li class="navigation-toggle-item"><a href="/about/" {% if navigationMainLinkActive == "about" %}class="navigation-toggle-active"{% endif %} title="About">About</a></li>
-              <li class="navigation-toggle-item"><a href="https://contact-us.export.great.gov.uk/selling_online_overseas" title="Contact us" class="last">Contact us</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  -->
