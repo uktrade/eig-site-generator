@@ -44,6 +44,7 @@
   },
   "homepage": "https://github.com/uktrade/eig-site-generator#readme",
   "devDependencies": {
+    "bourbon-neat": "1.8.0",
     "browserify": "^14.1.0",
     "dit-pattern-library": "uktrade/dit-pattern-library",
     "envify": "^4.0.0",
@@ -56,6 +57,7 @@
     "metalsmith-page-builder": "uktrade/metalsmith-page-builder",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.0",
+    "node-sass-import": "^1.1.0",
     "nodemon": "^1.11.0",
     "nunjucks": "^3.0.0",
     "replace-in-file": "^2.5.0",
