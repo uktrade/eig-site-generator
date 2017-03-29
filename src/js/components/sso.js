@@ -2,7 +2,7 @@
   var cookies,
   ssoSignIn = $('#sso-signin'),
   ssoSignOut = $('#sso-signout')
-  ssoCookieName = "sso_user";
+  ssoCookieName = 'sso_display_logged_in';
 
   ssoSignOut.hide();
   ssoSignIn.ready(setupSsoLink);
