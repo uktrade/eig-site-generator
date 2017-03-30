@@ -9,5 +9,4 @@ var sso = require('./components/sso');
 navigation.init();
 video.init();
 
-require('./init');
 
