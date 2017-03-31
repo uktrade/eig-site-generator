@@ -1,11 +1,6 @@
 
-{%if DIT_ENV == 'development' %}
 {% set ssoBaseUrl = 'https://stage.sso.uktrade.io' %}
 {% set profileUrl = 'https://stage.profile.uktrade.io/export-opportunities/applications/' %}
-{%else %}
-{% set ssoBaseUrl = 'https://sso.trade.great.gov.uk' %}
-{% set profileUrl = 'https://profile.great.gov.uk/export-opportunities/applications/' %}
-{% endif %}
 
 <header role="banner">
     <div class="navigation">
