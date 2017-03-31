@@ -1,3 +1,12 @@
+
+{%if DIT_ENV == 'development' %}
+{% set ssoBaseUrl = 'https://stage.sso.uktrade.io' %}
+{% set profileUrl = 'https://stage.profile.uktrade.io/export-opportunities/applications/' %}
+{%else %}
+{% set ssoBaseUrl = 'https://sso.trade.great.gov.uk' %}
+{% set profileUrl = 'https://profile.great.gov.uk/export-opportunities/applications/' %}
+{% endif %}
+
 <header role="banner">
     <div class="navigation">
       <div class="navigation-strip background--dark-navy">
@@ -9,12 +18,12 @@
           </ul>
 
           <ul class="list-inline list-separators float--right navigation-login font-regular" id="sso-signin">
-            <li class="float--left soft-half--right"><a class="link--white" href="https://sso.trade.great.gov.uk/accounts/login/" title="Sign in"><i class="icon icon--left icon-sign-in" style="background-image: url({{assets}}/img/icons/signout.svg)"></i><span class="hide-mobile">Sign in</span></a></li>
-            <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="https://sso.trade.great.gov.uk/accounts/signup/" title="Register"><span>Register</span></a></li>
+            <li class="float--left soft-half--right"><a class="link--white" href="{{ssoBaseUrl}}/accounts/login/" title="Sign in"><i class="icon icon--left icon-sign-in" style="background-image: url({{assets}}/img/icons/signout.svg)"></i><span class="hide-mobile">Sign in</span></a></li>
+            <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ssoBaseUrl}}/accounts/signup/" title="Register"><span>Register</span></a></li>
           </ul>
           <ul class="list-inline list-separators float--right navigation-login font-regular" id="sso-signout" style="display:none">
-            <li class="float--left soft-half--right"><a class="link--white" href="https://profile.great.gov.uk/export-opportunities/applications/" title="Profile"><i class="icon icon--left icon-sign-in" style="background-image: url({{assets}}/img/icons/signout.svg)"></i><span class="hide-mobile">Profile</span></a></li>
-            <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="https://sso.trade.great.gov.uk/accounts/logout/" title="Register"><span>Sign out</span></a></li>
+            <li class="float--left soft-half--right"><a class="link--white" href="{{profileUrl}}" title="Profile"><i class="icon icon--left icon-sign-in" style="background-image: url({{assets}}/img/icons/signout.svg)"></i><span class="hide-mobile">Profile</span></a></li>
+            <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ssoBaseUrl}}/accounts/logout/" title="Register"><span>Sign out</span></a></li>
           </ul>
         </div>
       </div>
