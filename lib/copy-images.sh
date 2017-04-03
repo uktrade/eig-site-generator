@@ -10,6 +10,9 @@ mkdirp $images_output
 if [[ $DIT_ENV == "development" ]]; then
   echo "Copying images folder for development environment"
   node lib/copy-images.js $images_output
+elif [[ $DIT_ENV == "staging" ]]; then
+  echo "Copying images folder for staging environment"
+  node lib/copy-images.js $images_output
 else
   echo "Copying images folder for production environment"
 	node lib/copy-images.js $images_output

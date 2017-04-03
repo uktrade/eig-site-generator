@@ -14,6 +14,9 @@ mkdirp $js_output
 if [[ $DIT_ENV == "development" ]]; then
   echo "Building js files for development environment"
   $WATCHIFY src/js/main.js --debug -o $js_output/main.js
+elif [[ $DIT_ENV == "staging" ]]; then
+  echo "Building js files for staging environment"
+  $BROWSERIFY src/js/main.js | uglifyjs --compress -o $js_output/main.js
 else
   echo "Building js files for production environment"
   $BROWSERIFY src/js/main.js | uglifyjs --compress -o $js_output/main.js

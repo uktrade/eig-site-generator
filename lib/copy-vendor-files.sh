@@ -12,6 +12,9 @@ echo $vendor_output
 if [[ $DIT_ENV == "development" ]]; then
   echo "Copying vendor folder for development environment"
   node lib/copy-vendor-files.js $vendor_output
+elif [[ $DIT_ENV == "staging" ]]; then
+  echo "Copying vendor folder for development environment"
+  node lib/copy-vendor-files.js $vendor_output
 else
   echo "Copying vendor folder for production environment"
 	node lib/copy-vendor-files.js $vendor_output

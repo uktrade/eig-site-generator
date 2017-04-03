@@ -14,6 +14,9 @@ if [[ $DIT_ENV == "development" ]]; then
   $NODE_SASS src/sass &&
   $NODE_SASS --watch --recursive src/sass --source-map true \
       --source-maps-contents sass
+elif [[ $DIT_ENV == "staging" ]]; then
+  echo "Building css files for staging environment"
+  $NODE_SASS src/sass --output-style compressed
 else
   echo "Building css files for production environment"
   $NODE_SASS src/sass --output-style compressed

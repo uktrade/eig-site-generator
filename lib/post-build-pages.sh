@@ -8,6 +8,9 @@ assets_path='/assets/img/';
 if [[ $DIT_ENV == "development" ]]; then
   echo "Post build pages - rewrite asset paths in development"
   node lib/post-build-pages.js $assets_path
+elif [[ $DIT_ENV == "staging" ]]; then
+  echo "Post build pages - rewrite asset paths in staging"
+  node lib/post-build-pages.js $assets_path
 else
   echo "Post build pages - rewrite asset paths in production"
 	node lib/post-build-pages.js $assets_path
