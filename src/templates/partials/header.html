@@ -1,6 +1,11 @@
 
+{%if DIT_ENV == 'development' %}
 {% set ssoBaseUrl = 'https://stage.sso.uktrade.io' %}
 {% set profileUrl = 'https://stage.profile.uktrade.io/export-opportunities/applications/' %}
+{%else %}
+{% set ssoBaseUrl = 'https://sso.trade.great.gov.uk' %}
+{% set profileUrl = 'https://profile.great.gov.uk/export-opportunities/applications/' %}
+{% endif %}
 
 <header role="banner">
     <div class="navigation">
@@ -33,9 +38,9 @@
         <div class="navigation-main-section outer-container">
           <nav>
             <ul class="list-inline list-separators navigation-main-menu">
-              <li><a title="new to exporting" href="https://export.great.gov.uk/new/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "new" %} navigation-main-link--active{% endif %}">New to exporting</a></li>
-              <li><a title="occasional exporter" href="https://export.great.gov.uk/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "occasional" %}navigation-main-link--active{% endif %}">Occasional exporter</a></li>
-              <li><a title="regular exporter" href="https://export.great.gov.uk/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Regular exporter</a></li>
+              <li><a title="new to exporting" href="/new/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "new" %} navigation-main-link--active{% endif %}">New to exporting</a></li>
+              <li><a title="occasional exporter" href="/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "occasional" %}navigation-main-link--active{% endif %}">Occasional exporter</a></li>
+              <li><a title="regular exporter" href="/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Regular exporter</a></li>
               <li><a href="https://opportunities.export.great.gov.uk" title="Export opportunities" class="navigation-main-link navigation-main-link--secondary">Export opportunities</a></li>
               <li><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer" class="navigation-main-link navigation-main-link--secondary">Find a buyer</a></li>
               <li><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas" class="navigation-main-link navigation-main-link--secondary">Selling online overseas</a></li>
@@ -51,9 +56,9 @@
               <div class="navigation-toggle-services-section">
                 <h3 class="font-large font-light-grey font-light push--bottom hide-mobile">Export readiness</h3>
                 <ul class="font-regular">
-                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "new" %}class="navigation-toggle-active"{% endif %}"><a title="new to exporting" href="https://export.great.gov.uk/new/">New to exporting</a></li>
-                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "occasional" %}class="navigation-toggle-active"{% endif %}"><a title="occasional exporter" href="https://export.great.gov.uk/occasional/">Occasional exporter</a></li>
-                  <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="https://export.great.gov.uk/regular/" class="last">Regular exporter</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "new" %}class="navigation-toggle-active"{% endif %}"><a title="new to exporting" href="/new/">New to exporting</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "occasional" %}class="navigation-toggle-active"{% endif %}"><a title="occasional exporter" href="/occasional/">Occasional exporter</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="/regular/" class="last">Regular exporter</a></li>
                 </ul>
               </div>
             </div>
@@ -75,7 +80,7 @@
             <div class="col-3">
               <h3 class="font-large font-light-grey font-light soft--left push--bottom hide-mobile">About us</h3>
               <ul class="navigation-toggle-middle">
-                <li class="navigation-toggle-item"><a href="https://export.great.gov.uk/about/" title="About great.gov.uk">About great.gov.uk</a></li>
+                <li class="navigation-toggle-item"><a href="/about/" title="About great.gov.uk">About great.gov.uk</a></li>
                 <li class="navigation-toggle-item"><a href="https://contact-us.export.great.gov.uk/selling_online_overseas" title="Contact us" class="last">Contact us</a></li>
               </ul>
             </div>
