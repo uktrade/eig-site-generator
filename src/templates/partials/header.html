@@ -40,7 +40,7 @@
             <ul class="list-inline list-separators navigation-main-menu">
               <li><a title="new to exporting" href="/new/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "new" %} navigation-main-link--active{% endif %}">New to exporting</a></li>
               <li><a title="occasional exporter" href="/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "occasional" %}navigation-main-link--active{% endif %}">Occasional exporter</a></li>
-              <li><a title="regular exporter" href="/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Regular exporter</a></li>
+              <li><a title="regular exporter" href="/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular {% if navigationMainLinkActive == "regular" %}navigation-main-link--active{% endif %}">Regular exporter</a></li>
               <li><a href="https://opportunities.export.great.gov.uk" title="Export opportunities" class="navigation-main-link navigation-main-link--secondary">Export opportunities</a></li>
               <li><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer" class="navigation-main-link navigation-main-link--secondary">Find a buyer</a></li>
               <li><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas" class="navigation-main-link navigation-main-link--secondary">Selling online overseas</a></li>
@@ -56,9 +56,9 @@
               <div class="navigation-toggle-services-section">
                 <h3 class="font-large font-light-grey font-light push--bottom hide-mobile">Export readiness</h3>
                 <ul class="font-regular">
-                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "new" %}class="navigation-toggle-active"{% endif %}"><a title="new to exporting" href="/new/">New to exporting</a></li>
-                  <li class="navigation-toggle-item navigation-toggle-services {% if navigationMainLinkActive == "occasional" %}class="navigation-toggle-active"{% endif %}"><a title="occasional exporter" href="/occasional/">Occasional exporter</a></li>
-                  <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="/regular/" class="last">Regular exporter</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services"><a title="new to exporting" href="/new/" class="{% if navigationMainLinkActive == "new" %}navigation-toggle-active{% endif %}">New to exporting</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services"><a title="occasional exporter" href="/occasional/" class="{% if navigationMainLinkActive == "occasional" %}navigation-toggle-active{% endif %}">Occasional exporter</a></li>
+                  <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="/regular/" class="last {% if navigationMainLinkActive == "regular" %}navigation-toggle-active{% endif %}">Regular exporter</a></li>
                 </ul>
               </div>
             </div>
@@ -73,7 +73,7 @@
             <div class="col-3">
               <h3 class="font-large font-light-grey font-light push--bottom hide-mobile soft--left">Other support</h3>
               <ul class="navigation-toggle-middle">
-                <li class="navigation-toggle-item"><a href="" title="Get finance">Get finance</a></li>
+                <li class="navigation-toggle-item"><a href="" title="Get finance" class="{% if navigationMainLinkActive == "get-finance" %}navigation-toggle-active{% endif %}">Get finance</a></li>
                 <li class="navigation-toggle-item"><a href="https://events.trade.gov.uk/" title="Events">Events</a></li>
               </ul>
             </div>
