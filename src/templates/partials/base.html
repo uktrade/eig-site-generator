@@ -6,6 +6,22 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en-US"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
 <head>
+  <!-- Google Tag Manager -->
+<script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({‘
+            gtm.start’: new Date().getTime(),
+            event: ‘gtm.js’
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != ‘dataLayer’ ? ‘ & l = ‘+l : ‘’;
+        j.async = true;
+        j.src = ‘https: //www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window, document, ‘script’, ‘dataLayer’, ‘GTM - NLJP5CL’);
+</script>
+<!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link rel="apple-touch-icon" href="{{assets}}/img/app-icons/apple-touch-icon.png">
@@ -19,18 +35,9 @@
   <link rel="apple-touch-icon-precomposed" href="{{assets}}/img/app-icons/apple-touch-icon-precomposed.png">
   <link rel="icon" type="image/png" href="{{assets}}/img/shortcut-icon.png">
   <link rel="canonical" href="/" />
+
   <script type='text/javascript' src='{{assets}}/vendor/js/modernizr.min.js'></script>
-  <!-- Google Tag Manager -->                 
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':                  
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],                 
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=S2-vb6_RF_jGWu2WJIORdQ&gtm_preview=env-5&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);                 
-  })(window,document,'script','dataLayer','GTM-NLJP5CL');</script>                  
-  <!-- End Google Tag Manager --> 
-  <!-- JS Libs -->
-  <!--[if lte IE 8]>
-  <script type="text/javascript" src="{{assets}}/vendor/js/html5shiv.min.js"></script>
-  <script type="text/javascript" src="{{assets}}/vendor/js/eventListener.polyfill.js"></script>
-  <![endif]-->
+
   <link rel="stylesheet" href="{{assets}}/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <noscript>
     <style>
@@ -41,9 +48,12 @@
   </noscript>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->                  
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLJP5CL&gtm_auth=S2-vb6_RF_jGWu2WJIORdQ&gtm_preview=env-5&gtm_cookies_win=x"                 
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>                  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLJP5CL"
+    height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
   {% include "./header.html" %}
@@ -66,4 +76,3 @@
   <script type="text/javascript" src="{{assets}}/vendor/js/ie8.js"></script>
   <![endif]-->
   <script src="{{assets}}/js/main.js"></script>
-
